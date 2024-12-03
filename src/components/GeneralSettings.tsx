@@ -26,7 +26,9 @@ export default function GeneralSettings() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="text-white text-lg mb-2 block">Volumen de Música</label>
+        <label className="text-white text-lg mb-2 block"
+               htmlFor="musicSwitch"
+        >Volumen de Música</label>
         <Slider
           min={0}
           max={100}
@@ -39,7 +41,9 @@ export default function GeneralSettings() {
       </div>
 
       <div>
-        <label className="text-white text-lg mb-2 block">Volumen de Efectos de Sonido</label>
+        <label className="text-white text-lg mb-2 block"
+               htmlFor="volumeSwitch"
+        >Volumen de Efectos de Sonido</label>
         <Slider
           min={0}
           max={100}

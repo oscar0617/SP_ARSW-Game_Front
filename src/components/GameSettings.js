@@ -88,20 +88,35 @@ export default function GameSettings() {
           </div>
   
           <div>
-            <label className="text-white text-lg mb-2 block">Máximo de Saltos</label>
+            <label 
+              className="text-white text-lg mb-2 block" 
+              htmlFor="maxJumpsSlider"
+            >
+              Máximo de Saltos
+            </label>
             <Slider
+              id="maxJumpsSlider"
               min={0}
               max={5}
               step={1}
               value={[settings.maxJumps]}
               onValueChange={(value) => updateSetting('maxJumps', value[0])}
               className="w-full"
+              aria-labelledby="maxJumpsLabel"
             />
-            <p className="text-purple-300 mt-2">Saltos permitidos: {settings.maxJumps}</p>
+            <p 
+              id="maxJumpsLabel" 
+              className="text-purple-300 mt-2"
+            >
+              Saltos permitidos: {settings.maxJumps}
+            </p>
           </div>
 
+
           <div className="flex items-center justify-between">
-            <label className="text-white text-lg">Turbos Habilitados</label>
+            <label className="text-white text-lg"
+                   htmlFor="boostSwitch"
+            >Turbos Habilitados</label>
             <Switch
               checked={settings.boost}
               onCheckedChange={(checked) => updateSetting('boost', checked)}
@@ -109,7 +124,9 @@ export default function GameSettings() {
           </div>
   
           <div>
-            <label className="text-white text-lg mb-2 block">Velocidad del Juego</label>
+            <label className="text-white text-lg mb-2 block"
+                   htmlFor="VelocitySwitch"
+            >Velocidad del Juego</label>
             <Slider
               min={0.5}
               max={2}
